@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0;
 }
+
 :root {
     --body_back_black_col: black;
     --body_back_wheat_col: wheat;
@@ -13,24 +14,29 @@
     --lightseccol: rgba(255, 4, 4, 0.772);
     --primecol: rgb(51 51 51);
 }
+
 /* CURSOR */
 
 ::-webkit-scrollbar {
     width: 0px;
 }
-.filter{
+
+.filter {
     filter: invert(1);
 }
-.dark{
+
+.dark {
     background-color: var(--body_back_black_col);
     color: var(--text);
 }
-.light{
+
+.light {
     color: var(--body_back_black_col);
     background-color: var(--body_back_wheat_col);
 }
 
 body {
+    position: relative;
     font-family: "Poppins", sans-serif;
 }
 
@@ -39,30 +45,35 @@ body {
     position: fixed;
 }
 
+.first {
+    top: 0px;
+    left: 0px;
+}
+
 .white {
     top: 23px;
     right: 23px;
 }
 
-.pill{
+.pill {
     bottom: 20vh;
     z-index: 2;
     left: 0px;
 }
 
-.cube{
+.cube {
     bottom: 6vh;
     z-index: -1;
     right: 37vw;
 }
 
-.ring{
+.ring {
     bottom: 0px;
     z-index: -1;
     right: 0px;
 }
 
-.last{
+.last {
     bottom: 0;
     right: 0;
     z-index: -2;
@@ -75,16 +86,16 @@ body {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100vh;
 }
 
 .box {
     width: 90%;
-    height: 75%;
+    min-height: 520px;
     background-color: var(--transperant);
     border: 1px solid var(--transperant2);
     backdrop-filter: blur(3px);
     border-radius: 25px;
+    margin: 80px auto;
 }
 
 nav {
@@ -111,60 +122,62 @@ nav>ul {
 nav>img:first-child {
     width: 60px;
 }
-.aboutbtn, .projectsbtn{
+
+.aboutbtn,
+.projectsbtn {
     cursor: pointer;
 }
+
 nav>img:last-child {
     cursor: pointer;
 }
 
-#theme2{
+#theme2 {
     display: none;
     filter: invert(1);
 }
 
 .about {
+    width: 90%;
+    height: 89%;
     display: flex;
-    justify-content: space-around;
+    margin: 12px auto;
+    justify-content: center;
     align-items: center;
-    padding: 0px 32px;
 }
 
 .text {
     background-color: transparent;
-    margin-top: 60px;
-    width: 375px;   
 }
 
-.xx-small {
-    font-size: 12px;
+.name,
+.des,.dev {
+    color: orangered;
 }
 
-.name {
-    background: -webkit-linear-gradient(rgb(255, 213, 0), orange);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.des {
+/* .des {
     background: -webkit-linear-gradient(yellow, red);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .dev {
-    background: -webkit-linear-gradient(purple, pink);
+    background: -webkit-linear-gradient(red, yellow);
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-.contact{
+} */
+
+.contact {
     display: flex;
+    margin-top: 40px;
 }
-button > a{
+
+button>a {
     text-decoration: none;
     background-color: transparent !important;
 }
-.textbtn{
+
+.textbtn {
     margin: 12px;
     border: none;
     background-color: darkorange;
@@ -174,19 +187,15 @@ button > a{
     font-size: large;
 }
 
-.man>img:first-child {
-    position: absolute;
-    left: 60%;
-}
 /* projects */
-.projects{
-    display: flex;
-    margin: 0px auto;
+.projects {
+    margin: 35px auto;
     height: 93%;
-    width: 80%;
+    width: 90%;
     align-items: center;
     overflow: auto;
 }
+
 /* Cards */
 .card {
     margin: auto 12px;
@@ -215,9 +224,11 @@ button > a{
     transform: scaleX(1.15);
     transition-duration: 0.5s;
 }
+
 .card>.cbtn {
     text-align: center;
 }
+
 .card>.cbtn>a {
     text-decoration: none;
     border: none;
@@ -242,10 +253,12 @@ button > a{
     overflow: hidden;
     text-align: center;
 }
+
 .card_text>ul {
     list-style: none;
     font-size: medium;
 }
+
 .lastbtn {
     margin: 13px 0px;
     display: flex;
@@ -269,26 +282,36 @@ button > a{
 
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1080px) {
+    .about{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
     .pill {
         z-index: -1;
     }
 
     .text {
-        font-size: small;
+        font-size: medium;
+    }
+    .contact{
+        font-size: large;
+        width: 100%;
+        justify-content: center;
+    }
+    .man {
+        height: 400px;
     }
 
-    .man {
-        display: none;
-    }
-    .projects{
+    .projects {
         width: 99%;
     }
-    .textbtn{
+
+    .textbtn {
         font-size: smaller;
         padding: 10px 12px;
-
+        
     }
     
-
+    
 }
