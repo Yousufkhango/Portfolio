@@ -145,7 +145,6 @@ nav>img:last-child {
     justify-content: center;
     align-items: center;
 }
-
 .text {
     background-color: transparent;
 }
@@ -154,19 +153,6 @@ nav>img:last-child {
 .des,.dev {
     color: orangered;
 }
-
-/* .des {
-    background: -webkit-linear-gradient(yellow, red);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.dev {
-    background: -webkit-linear-gradient(red, yellow);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
 .contact {
     display: flex;
     margin-top: 40px;

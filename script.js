@@ -30,7 +30,7 @@ projectsbtn.forEach(projectsbtn => {
     projectsbtn.addEventListener("click", () => {
         about.style.display="none"
         aboutbtn.classList.remove("active")
-        projectsbtn.classList.add("active")
+        document.getElementById('project').classList.add("active")
         projects.style.display="flex"
     })
 });
