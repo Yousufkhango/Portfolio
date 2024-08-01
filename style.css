@@ -185,6 +185,7 @@ button>a {
 
 /* Cards */
 .card {
+    overflow: hidden;
     margin: auto 12px;
     border-radius: 15px;
     border: 2px solid var(--transperant2);
