@@ -40,6 +40,10 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+#theme1{
+    width: 25px;
+}
+
 .back {
     z-index: -1;
     position: fixed;
@@ -92,12 +96,12 @@ body {
 
 .box {
     width: 90%;
-    min-height: 520px;
+    min-height: 90vh;
     background-color: var(--transperant);
     border: 1px solid var(--transperant2);
     backdrop-filter: blur(3px);
     border-radius: 25px;
-    margin: 60px auto;
+    margin: 10px auto;
     font-size: large;
     font-weight: bolder;
 }
@@ -127,8 +131,8 @@ nav>img:first-child {
     width: 60px;
 }
 
-.aboutbtn,
-.projectsbtn {
+.firstbtn,
+.secondbtn {
     cursor: pointer;
 }
 
@@ -141,7 +145,7 @@ nav>img:last-child {
     filter: invert(1);
 }
 
-.about {
+.first_protion {
     width: 90%;
     height: 89%;
     display: flex;
@@ -157,9 +161,7 @@ nav>img:last-child {
     background-color: transparent;
 }
 
-.name,
-.des,
-.dev {
+.org {
     color: orangered;
 }
 
@@ -176,109 +178,48 @@ button>a {
     background-color: transparent !important;
 }
 
-.textbtn {
+.firstpagebtn {
     margin: 12px;
     border: none;
-    background-color: darkorange;
+    background-color: rgb(255, 92, 33);
     padding: 12px 24px;
     border-radius: 12px;
     font-weight: bolder;
     font-size: x-large;
 }
 
-/* projects */
-.projects {
-    margin: 35px auto;
-    height: 93%;
-    width: 90%;
-    align-items: center;
-    overflow: auto;
+/* second_portion */
+.second_portion {
+    margin-top: 35px;
+    overflow: scroll;
+    flex-direction: column;
 }
-
-/* Cards */
-.card {
-    overflow: hidden;
-    margin: auto 12px;
-    border-radius: 15px;
-    border: 2px solid var(--transperant2);
-    width: 250px;
-    min-width: 250px;
-    height: 400px;
+.second_portion_text{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    transition-duration: 0.3s;
-    background-color: var(--transperantblue);
+    gap: 32px;
 }
-
-.card>img:first-child {
-    border-radius: 15px;
-    width: 95%;
-    height: 40%;
-    margin: 6px auto;
-    object-fit: cover;
-    transition-duration: 0.5s;
+.skills{
+    padding-left: 18px;
+    margin-left: 6px;
+    border-left: 4px solid orangered;
+    border-radius: 12px;
 }
-
-.card>img:first-child:hover {
-    transform: scaleX(1.15);
-    transition-duration: 0.5s;
-}
-
-.card>.cbtn {
-    text-align: center;
-}
-
-.card>.cbtn>a {
-    text-decoration: none;
-    border: none;
-    padding: 1px 15px;
-    border-radius: 15px;
-    background-color: var(--lightseccol);
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.card_text {
-    background-color: transparent;
-    height: 30%;
+.second_portion_contacts>ul{
+    margin-top: 34px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    object-fit: fill;
-    width: 90%;
-    overflow: hidden;
-    text-align: center;
-}
-
-.card_text>ul {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     list-style: none;
-    font-size: medium;
+    flex-direction: row;
 }
-
-.lastbtn {
-    margin: 13px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lastbtn>a {
-    cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 23px;
-    border: none;
-    font-weight: bold;
-    color: var(--seccol);
+.second_portion_contacts>ul>li>a{
     text-decoration: none;
 }
 
-.lastbtn>a:hover {
-    transform: scale(0.95);
-}
+
+
+/* Media Queries */
 
 @media (min-width: 640px) {
 
@@ -287,28 +228,35 @@ button>a {
         font-size: x-large;
         font-weight: 100;
     }
+    .skills>p{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 100;
+    }
 
 }
 
 @media (min-width: 768px) {
-    .about{
+    .first_protion{
         margin: 60px auto;
     }
-
  }
 
  @media (min-width: 1024px) { 
-
- 
     .contact{
         flex-direction: row-reverse;
+    }
+    .second_portion_text{
+        font-size: x-large;
+    }
+    .skills{
+        border-left: 6px solid orangered;
     }
 
   }
 
   @media (min-width: 1280px) { 
 
-    .textbtn {
+    .firstpagebtn {
         font-size: large;
     } 
     .text{
@@ -317,7 +265,7 @@ button>a {
     .man{
        height: 380px;
     }
-    .about{
+    .first_protion{
        margin: 40px auto;
      }
     
@@ -325,8 +273,7 @@ button>a {
 
   @media (min-width: 1536px) { 
 
-    .textbtn {
-        background-color: rgb(83, 80, 80);
+    .firstpagebtn {
         font-size: x-large;
     } 
     .text{
@@ -339,24 +286,27 @@ button>a {
     .man{
        height: 600px;
     }
-    .about{
+    .first_protion{
        margin: 80px auto;
        flex-direction: row-reverse;
      }
      nav>ul{
         font-size: x-large;
-        gap: 80px;
+        gap: 60px;
      }
      .box{
-        height: 80vh;
+        min-height: 80vh;
      }
-
+     .skills{
+        margin-left: 23px;
+        margin-right: 23px;
+     }
+     #theme1{
+         width: 35px;
+     }
   }
-  @media (min-width: 2000px) { 
 
-    .textbtn {
-        background-color: rgb(248, 0, 0);
-    } 
+  @media (min-width: 2000px) { 
     .text{
         font-size: xx-large;
     }

@@ -22,25 +22,25 @@ theme2.addEventListener("click", () => {
     document.querySelector(".navicon").classList.remove("filter")
 })
 
-let about = document.querySelector(".about")
-let projects = document.querySelector(".projects")
-let aboutbtn = document.querySelector(".aboutbtn")
-let projectsbtn = document.querySelectorAll(".projectsbtn")
-projectsbtn.forEach(projectsbtn => {
-    projectsbtn.addEventListener("click", () => {
-        about.style.display="none"
-        aboutbtn.classList.remove("active")
+let first_protion = document.querySelector(".first_protion")
+let second_portion = document.querySelector(".second_portion")
+let firstbtn = document.querySelector(".firstbtn")
+let secondbtn = document.querySelectorAll(".secondbtn")
+secondbtn.forEach(secondbtn => {
+    secondbtn.addEventListener("click", () => {
+        first_protion.style.display="none"
+        firstbtn.classList.remove("active")
         document.getElementById('project').classList.add("active")
-        projects.style.display="flex"
+        second_portion.style.display="flex"
     })
 });
 
-aboutbtn.addEventListener("click", () => {
+firstbtn.addEventListener("click", () => {
 
-    projects.style.display="none"
-    projectsbtn.forEach(projectsbtn => {
-        projectsbtn.classList.remove("active")
+    second_portion.style.display="none"
+    secondbtn.forEach(secondbtn => {
+        secondbtn.classList.remove("active")
     });
-    about.style.display="flex"
-    aboutbtn.classList.add("active")
+    first_protion.style.display="flex"
+    firstbtn.classList.add("active")
 })
