@@ -30,7 +30,7 @@ secondbtn.forEach(secondbtn => {
     secondbtn.addEventListener("click", () => {
         first_protion.style.display="none"
         firstbtn.classList.remove("active")
-        document.getElementById('project').classList.add("active")
+        document.getElementById('navSecondBtn').classList.add("active")
         second_portion.style.display="flex"
     })
 });
